@@ -29,15 +29,15 @@
 
 def decode_morse(code)
   @words = code.split('   ')
-    @words.each do |word|
-      @chars = word.split
-        @letters = ' '
-          @chars.each do |c|
-            @decode = @morse_code[c]
-            @letters += @decode
-        end
-        print "#{@letters}"
+  @words.each do |word|
+    @chars = word.split
+    @letters = ' '
+    @chars.each do |c|
+      @decode = @morse_code[c]
+      @letters += @decode
     end
+    print @letters.to_s
+  end
 end
-        
+
 decode_morse('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
